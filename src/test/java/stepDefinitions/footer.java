@@ -12,6 +12,7 @@ import org.testng.Assert;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.footerFactory;
 //import pages.footerFactory;
 public class footer {
 	WebDriver driver;
@@ -40,8 +41,12 @@ public class footer {
 
 	@When("user click on terms and conditions link")
 	public void user_click_on_terms_and_conditions_link(){
+		footerFactory page = new footerFactory(driver);
+		page.TermsConditions();
+		
+		
 	    // Write code here that turns the phrase above into concrete actions
-	    driver.findElement(By.id("terms_n_conditions_footer")).click();
+	   // driver.findElement(By.id("terms_n_conditions_footer")).click();
 //	    pageFactory = new footerFactory(driver);
 //	    pageFactory.termsConditions();
 	    String actualOutcome = driver.getTitle();
@@ -58,10 +63,13 @@ public class footer {
 	@When("user click on privacy policy link")
 	public void user_click_on_privacy_policy_link() {
 	    // Write code here that turns the phrase above into concrete actions
-	    driver.findElement(By.id("privacy_policy_footer")).click();
+	    //driver.findElement(By.id("privacy_policy_footer")).click();
+		footerFactory page = new footerFactory(driver);
+	    page.PrivacyPolicy();
 	    String actualUrl = driver.getCurrentUrl();
 	    String expectedUrl  = "https://www.redbus.in/info/privacypolicy";
 	    Assert.assertNotEquals(actualUrl, expectedUrl);
+	    
 	}
 
 	@Then("user should be redirected to privacy policy page")
@@ -72,8 +80,10 @@ public class footer {
 
 	@When("user click on FAQ link")
 	public void user_click_on_faq_link() {
+		footerFactory page = new footerFactory(driver);
+	    page.Faq();
 	    // Write code here that turns the phrase above into concrete actions
-	    driver.findElement(By.id("faq_footer")).click();
+	   // driver.findElement(By.id("faq_footer")).click();
 	    
 
 	    
@@ -87,8 +97,10 @@ public class footer {
 
 	@When("user click on blog link")
 	public void user_click_on_blog_link() {
+		footerFactory page = new footerFactory(driver);
+	    page.Blog();
 	    // Write code here that turns the phrase above into concrete actions
-	    driver.findElement(By.id("blog_footer")).click();
+	    //driver.findElement(By.id("blog_footer")).click();
 	   
 	}
 
@@ -100,8 +112,10 @@ public class footer {
 
 	@When("user click on bus operator registration link")
 	public void user_click_on_bus_operator_registration_link() {
+		footerFactory page = new footerFactory(driver);
+	    page.BusOperatorRegistration();
 	    // Write code here that turns the phrase above into concrete actions
-	    driver.findElement(By.id("bus_operator_registration_footer")).click();
+	    //driver.findElement(By.id("bus_operator_registration_footer")).click();
 	    
 	}
 

@@ -6,9 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class footerFactory {
-	public class footerFac{
 		WebDriver driver;
-		public  footerFac (WebDriver driver)
+		public  footerFactory (WebDriver driver)
 		{
 			this.driver = driver;
 			PageFactory.initElements(driver, this);
@@ -19,23 +18,23 @@ public class footerFactory {
 		@FindBy(xpath = "//*[@id=\"blog_footer\"]") WebElement blog;
 		@FindBy(xpath = "//*[@id=\"bus_operator_registration_footer\"]") WebElement busOperatorRegistration;
 		
-		public void termsConditions()
+		public void TermsConditions()
 		{
 			termsConditions.click();
 		}
-		public void privacyPolicy()
+		public void PrivacyPolicy()
 		{
 			privacyPolicy.click();
 		}
-		public void faq()
+		public void Faq()
 		{
 			faq.click();
 		}
-		public void blog()
+		public void Blog()
 		{
 			blog.click();
 		}
-		public void busOperatorRegistration()
+		public void BusOperatorRegistration()
 		{
 			busOperatorRegistration.click();
 		}
@@ -43,4 +42,4 @@ public class footerFactory {
 		
 		
 	}
-}
+
